@@ -365,6 +365,18 @@ function namesAtLeastAge(people, minAge) {
 //   cartTotal([{ item: "Pen", price: 2, quantity: 10 }]) -> 18
 // ---------------------------------------------------------------------
 function cartTotal(cart) {
+    let price = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].quantity >= 10) {
+            price = price + cart[i].price * cart[i].quantity * 0.9;
+        }
+        else {
+            price = price + cart[i].price * cart[i].quantity;
+        }
+    }
+
+    return price;
 }
 
 
