@@ -283,7 +283,36 @@ function gradeReport(student) {
 //   rockPaperScissors("rock", "paper") -> "Player 2 wins"
 // ---------------------------------------------------------------------
 function rockPaperScissors(choice1, choice2) {
+    if (
+        (choice1 !== "rock" && choice1 !== "paper" && choice1 !== "scissors") ||
+        (choice2 !== "rock" && choice2 !== "paper" && choice2 !== "scissors") ) {
+        return "Invalid input";
+    }
+    
+    else if (choice1 === choice2) {
+        return "Draw";
+    }
+    else if (choice1 === "rock" && choice2 === "scissors") {
+        return "Player 1 wins";
+    }
+    else if (choice1 === "rock" && choice2 === "paper") {
+        return "Player 2 wins";
+    }
+    else if (choice1 === "scissors" && choice2 === "rock") {
+        return "Player 2 wins";
+    }
+    else if (choice1 === "scissors" && choice2 === "paper") {
+        return "Player 1 wins";
+    }
+    else if (choice1 === "paper" && choice2 === "rock") {
+        return "Player 1 wins";
+    }
+    else if (choice1 === "paper" && choice2 === "scissors") {
+        return "Player 2 wins";
+    }
+
 }
+
 
 
 // ---------------------------------------------------------------------
